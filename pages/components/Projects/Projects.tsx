@@ -42,10 +42,10 @@ const Projects = (): React.ReactElement => {
           />
           <ProjectCard
             date="July &#39;22"
-            name="PAIDLY"
+            name="MARKUP IO"
             description="We use cookies and similar technologies to help personalise content, tailor and measure ads, and provide a better experience. By clicking OK or turning an option on in Cookie Preferences, you agree to this, as outlined in our Cookie Policy. To change preferences or withdraw consent, please update your Cookie Preferences."
-            githubLink="https://github.com/Paidly"
-            liveLink="https://meetpaidly.com/"
+            githubLink="https://github.com/"
+            liveLink="https://github.com/"
             languages={[
               { name: 'JavaScript', color: 'yellow' },
               { name: 'TypeScript', color: 'blue' },

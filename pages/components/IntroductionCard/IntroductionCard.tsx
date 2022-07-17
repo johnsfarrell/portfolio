@@ -43,9 +43,8 @@ const IntroductionCard = (): React.ReactElement => {
             fontSize="2xl"
             textAlign={{ lg: 'left', base: 'center' }}
           >
-            I am a current intern at Sharp Notions and Paidly. Studying computer
-            science at Brown University. My passion is in full-stack and
-            software engineering.
+            Studying computer science at Brown University. My passion is in
+            full-stack and software engineering.
           </Text>
           <Flex
             justifyContent={{
