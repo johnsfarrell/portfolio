@@ -1,0 +1,108 @@
+/* Place you custom styles here, if required outside of Chakra */
+
+.cg {
+  &-generic {
+    background: linear-gradient(
+      147deg,
+      rgba(249, 15, 216, 1) 0%,
+      rgba(245, 67, 119, 1) 26%,
+      rgba(252, 28, 28, 1) 50%,
+      rgba(255, 195, 13, 1) 75%,
+      rgba(114, 251, 89, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-generic2 {
+    background: linear-gradient(
+      147deg,
+      rgb(249, 233, 15) 0%,
+      rgb(67, 245, 94) 26%,
+      rgb(28, 252, 69) 50%,
+      rgb(13, 255, 150) 75%,
+      rgba(114, 251, 89, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-blue {
+    background: linear-gradient(
+      147deg,
+      rgb(140, 15, 249) 0%,
+      rgb(67, 141, 245) 26%,
+      rgb(28, 99, 252) 50%,
+      rgb(13, 118, 255) 75%,
+      rgb(89, 237, 251) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-green {
+    background: linear-gradient(
+      147deg,
+      rgb(34, 249, 15) 0%,
+      rgb(67, 245, 79) 26%,
+      rgb(106, 252, 28) 50%,
+      rgb(13, 255, 106) 75%,
+      rgb(89, 251, 175) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-yellow {
+    background: linear-gradient(
+      147deg,
+      rgb(202, 249, 15) 0%,
+      rgb(245, 198, 67) 26%,
+      rgb(218, 252, 28) 50%,
+      rgb(255, 199, 13) 75%,
+      rgb(227, 251, 89) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-brown {
+    background: linear-gradient(
+      147deg,
+      rgb(214, 91, 91) 0%,
+      rgb(187, 64, 55) 50%,
+      rgb(243, 124, 80) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.gradient-border-bg {
+  background: linear-gradient(45deg, orange, purple) padding-box,
+    linear-gradient(45deg, purple, orange) border-box;
+  border: solid transparent;
+}
+
+.shadow {
+  &-box {
+    &-sm {
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 20px 20px,
+        rgba(0, 0, 0, 0.12) 0px -6px 30px, rgba(0, 0, 0, 0.12) 0px 2px 6px,
+        rgba(0, 0, 0, 0.17) 0px 6px 13px, rgba(0, 0, 0, 0.09) 0px -1px 5px;
+    }
+    &-lg {
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+  }
+  &-text {
+    text-shadow: 4px 4px 10px #000000;
+  }
+
+  &-discard {
+    text-shadow: 0px 0px 0px #00000000;
+  }
+}
