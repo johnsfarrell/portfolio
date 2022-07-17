@@ -1,9 +1,10 @@
 import * as React from 'react';
 import Footer from './components/Footer/Footer';
 import Portfolio from './containers/Portfolio/Portfolio';
-import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import '../styles/globals.scss';
 import Head from 'next/head';
+import theme from './theme';
 
 function MyApp() {
   return (
@@ -12,8 +13,11 @@ function MyApp() {
         <Head>
           <title>John Farrell</title>
         </Head>
-        <Portfolio />
-        <Footer />
+        <body>
+          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+          <Portfolio />
+          <Footer />
+        </body>
       </html>
     </ChakraProvider>
   );
