@@ -26,7 +26,9 @@ export default function Footer(): React.ReactElement {
         >
           {hasCopied ? 'Copied!' : 'jsfarrell12@gmail.com'}
         </Text>
-        <Text p={2}>Fairport, NY to Providence, RI</Text>
+        <Text fontSize="md" p={2}>
+          Fairport, NY to Providence, RI
+        </Text>
         <HStack>
           <Socials />
         </HStack>
