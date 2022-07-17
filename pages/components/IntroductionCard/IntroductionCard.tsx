@@ -86,6 +86,7 @@ const IntroductionCard = (): React.ReactElement => {
                 { name: 'Cypress', color: 'gray' },
                 { name: 'Docker', color: 'blue' },
                 { name: 'SASS', color: 'pink' },
+                { name: 'Racket', color: 'red' },
               ]}
               size="2xl"
             />
