@@ -1,6 +1,9 @@
 import React from 'react';
 import { Wrap, WrapItem, Center, Flex } from '@chakra-ui/react';
-import Language from './Language';
+type Language = {
+  name: string;
+  color: string;
+};
 
 const LanguageCard = (props: {
   langInput: Language;

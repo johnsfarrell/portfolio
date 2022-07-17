@@ -1,9 +1,12 @@
 import React from 'react';
 import { Box, Text, Flex, Link, chakra, IconButton } from '@chakra-ui/react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import Language from '../Languages/Language';
 import Languages from '../Languages/Languages';
 
+type Language = {
+  name: string;
+  color: string;
+};
 const ProjectCard = (props: {
   date: string;
   name: string;
