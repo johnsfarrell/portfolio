@@ -84,6 +84,8 @@ const IntroductionCard = (): React.ReactElement => {
                 { name: 'PHP', color: 'teal' },
                 { name: 'NextJS', color: 'orange' },
                 { name: 'Cypress', color: 'gray' },
+                { name: 'Docker', color: 'blue' },
+                { name: 'SASS', color: 'pink' },
               ]}
               size="2xl"
             />
