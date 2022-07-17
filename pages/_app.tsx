@@ -4,7 +4,14 @@ import Portfolio from './containers/Portfolio/Portfolio';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import '../styles/globals.scss';
 import Head from 'next/head';
-import theme from './theme';
+
+import { extendTheme, type ThemeConfig } from '@chakra-ui/react';
+const config: ThemeConfig = {
+  initialColorMode: 'dark',
+  useSystemColorMode: false,
+};
+
+const theme = extendTheme({ config });
 
 function MyApp() {
   return (
