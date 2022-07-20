@@ -27,6 +27,171 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  &-apple {
+    background-image: linear-gradient(90deg, #80d0f2, #5c82ff, #c480ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-apple2 {
+    background-image: linear-gradient(90deg, #f56772, #ba6bff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-apple3 {
+    background-image: linear-gradient(90deg, #f56772 20%, #7280ff 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-apple4 {
+    background-image: linear-gradient(
+      90deg,
+      #ffc170 0%,
+      #ec787f 50%,
+      #8980ed 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-apple5 {
+    background-image: linear-gradient(
+      90deg,
+      #ffc170 0%,
+      #ec787f 50%,
+      #8980ed 100%,
+      rgb(244, 244, 246) 150%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-apple6 {
+    background-image: linear-gradient(90deg, #8980ed, #ec787f, #ffc170);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-apple7 {
+    background-image: linear-gradient(90deg, #8980ed, #ec787f, #ffc170);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-apple8 {
+    background-image: linear-gradient(90deg, #80d0f2, #5c82ff, #c480ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-apple9 {
+    background-image: linear-gradient(90deg, #f56772 20%, #ba6bff 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-apple10 {
+    background-image: linear-gradient(135deg, #7438d1, #9039d0 40%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-apple11 {
+    background-image: linear-gradient(135deg, #9039d0, #c144bf 40%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-apple10 {
+    background-image: linear-gradient(135deg, #d14ab5, #f27860 40%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-apple11 {
+    background-image: linear-gradient(135deg, #f27860, #f48554 40%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-apple12 {
+    background: radial-gradient(#eff1ff, #000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 200%;
+    background-position: 50% 100%;
+    padding-bottom: 12px;
+  }
+  &-apple13 {
+    background: linear-gradient(to right bottom, #1f224b 0%, #2d5d85 100%);
+  }
+  &-apple14 {
+    background: linear-gradient(165deg, #2c4735 0%, #1d243e 60%, #101124 90%);
+  }
+  &-apple15 {
+    background: linear-gradient(to bottom, #203025 0%, #151516 100%);
+  }
+  &-apple16 {
+    background-image: radial-gradient(
+        at 100% 100%,
+        rgba(111, 88, 116, 0.7) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 90% 0%, #0a2961 0px, transparent 50%),
+      radial-gradient(at 18% 16%, rgba(58, 3, 130, 0.79) 0px, transparent 50%),
+      radial-gradient(at 100% 40%, rgba(76, 21, 147, 0.22) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, #74517b 0px, transparent 50%);
+  }
+  &-apple17 {
+    background: linear-gradient(150deg, #124d86 0%, #14204e 100%);
+  }
+  &-apple18 {
+    background: linear-gradient(rgba(0, 0, 0, 0), #151b25, #151516),
+      linear-gradient(90deg, #172538, #18263a 50%);
+  }
+  &-apple19 {
+    background-color: #c76686;
+    background-image: radial-gradient(at 65% 0%, #714f92 0px, transparent 50%),
+      radial-gradient(at 0% 65%, rgba(86, 36, 143, 0.64) 0px, transparent 50%),
+      radial-gradient(at 0% 37%, rgba(86, 36, 143, 0.66) 0px, transparent 50%),
+      radial-gradient(at 0% 2%, #57248f 0px, transparent 50%),
+      radial-gradient(at 100% 5%, #714f92 0px, transparent 50%),
+      radial-gradient(at 0% 100%, #56248f 0px, transparent 50%);
+  }
+  &-apple20 {
+    background: linear-gradient(to right bottom, #1f224b 0%, #2d5d85 100%);
+  }
+  &-apple21 {
+    background: linear-gradient(165deg, #2c4735 0%, #1d243e 60%, #101124 90%);
+  }
+  &-apple22 {
+    background-image: linear-gradient(45deg, #0ecffe 50%, #07a6f1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-apple23 {
+    background-image: linear-gradient(45deg, #18e198 50%, #0ec15d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-apple24 {
+    background-image: linear-gradient(45deg, #8a7cfb 50%, #633e9c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-apple25 {
+    background-image: linear-gradient(45deg, #fa7671 50%, #f45f7f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   &-blue {
     background: linear-gradient(
       147deg,

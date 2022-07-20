@@ -36,7 +36,7 @@ const IntroductionCard = (): React.ReactElement => {
             fontSize={{ lg: '6xl', base: '5xl' }}
             textAlign={{ lg: 'left', base: 'center' }}
           >
-            HI, I&#39;M <chakra.span className="cg-generic">JOHN</chakra.span>
+            HI, I&#39;M <chakra.span className="cg-apple12">JOHN</chakra.span>
           </Heading>
           <Text
             my={3}
