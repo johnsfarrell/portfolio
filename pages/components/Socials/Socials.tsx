@@ -18,7 +18,7 @@ const Socials = (): React.ReactElement => {
       >
         <IconButton
           size="lg"
-          colorScheme="linkedin"
+          colorScheme="gray"
           aria-label="linkedin"
           icon={<FaLinkedinIn />}
           fontSize="xx-large"
@@ -51,7 +51,7 @@ const Socials = (): React.ReactElement => {
         <Button
           size="lg"
           rightIcon={<FaFileContract fontSize="xx-large" />}
-          colorScheme="red"
+          colorScheme="gray"
           fontWeight="bold"
           fontFamily="mono"
           fontSize="xl"

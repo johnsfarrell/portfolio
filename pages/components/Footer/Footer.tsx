@@ -12,7 +12,7 @@ import Socials from '../Socials/Socials';
 export default function Footer(): React.ReactElement {
   const { hasCopied, onCopy } = useClipboard('jsfarrell12@gmail.com');
   return (
-    <Box bg="gray.900" color="gray.200" fontFamily="mono" fontSize="xl" p={10}>
+    <Box bg="gray.900" color="gray.400" fontFamily="mono" fontSize="xl" p={10}>
       <VStack align="center">
         <Text
           color="gray.100"

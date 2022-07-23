@@ -11,62 +11,60 @@ import {
   Button,
   Link,
   chakra,
+  Container,
 } from '@chakra-ui/react';
 import Socials from '../Socials/Socials';
 import Languages from '../Languages/Languages';
 
 const IntroductionCard = (): React.ReactElement => {
   return (
-    <Flex
-      className="shadow-box-lg"
-      flexDirection={{ lg: 'unset', base: 'column-reverse' }}
-      alignItems={{ lg: 'unset', base: 'center' }}
-    >
-      <Box
-        width={{
-          xl: '50%',
-          base: '100%',
-        }}
-        padding="10"
-        pr={{ lg: 0 }}
-      >
+    <Box>
+      <Box mt={20}>
+        <Image
+          className={'shadow-box-lg-light animated-1'}
+          margin={'auto'}
+          width={'50%'}
+          src="https://avatars.githubusercontent.com/u/69059806?v=4"
+          alt="John Farrell Profile"
+          borderRadius={'100%'}
+        />
+      </Box>
+      <Box margin={'auto'} justifyContent={'center'}>
         <Box justifyContent={'center'}>
           <Heading
             as="h1"
-            fontSize={{ lg: '6xl', base: '5xl' }}
-            textAlign={{ lg: 'left', base: 'center' }}
+            fontSize={'8xl'}
+            textAlign={'center'}
+            className="cg-apple12 animated-2"
           >
-            HI, I&#39;M <chakra.span className="cg-apple12">JOHN</chakra.span>
+            John Farrell
           </Heading>
           <Text
             my={3}
-            fontSize="2xl"
-            textAlign={{ lg: 'left', base: 'center' }}
+            fontSize="3xl"
+            textAlign={'center'}
+            className={'animated-3'}
           >
             Studying computer science at Brown University. My passion is in
+            full-stack and software engineering.Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. My passion is in
             full-stack and software engineering.
           </Text>
           <Flex
-            justifyContent={{
-              lg: 'flex-start',
-              base: 'center',
-            }}
+            justifyContent={'center'}
+            className={'animated-4'}
+            p={5}
+            color={'gray.300'}
           >
             <Socials />
           </Flex>
         </Box>
         <Box mt={75}>
-          <Heading fontSize="2xl" textAlign={{ lg: 'left', base: 'center' }}>
+          <Heading fontSize="2xl" textAlign={'center'}>
             I am always excited to learn!
           </Heading>
-          <Flex
-            justifyContent={{
-              lg: 'flex-start',
-              base: 'center',
-            }}
-            width={{ lg: 550, base: '100%' }}
-            mt={4}
-          >
+          <Flex justifyContent={'center'} width={'100%'} mt={4}>
             <Languages
               languages={[
                 { name: 'JavaScript', color: 'yellow' },
@@ -93,31 +91,7 @@ const IntroductionCard = (): React.ReactElement => {
           </Flex>
         </Box>
       </Box>
-      <Box
-        width="50%"
-        padding={{
-          xl: 10,
-          lg: 5,
-          base: 0,
-        }}
-        pt={{ lg: 10, base: 10 }}
-        pl={{ lg: 0 }}
-        display={{
-          lg: 'grid',
-        }}
-        justifyContent="center"
-      >
-        <Image
-          borderWidth={8}
-          width="100%"
-          dropShadow="xl"
-          className="gradient-border-bg shadow-box-lg"
-          src="https://avatars.githubusercontent.com/u/69059806?v=4"
-          alt="John Farrell Profile"
-          borderRadius={'100%'}
-        />
-      </Box>
-    </Flex>
+    </Box>
   );
 };
 

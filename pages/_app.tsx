@@ -1,30 +1,20 @@
 import * as React from 'react';
 import Footer from './components/Footer/Footer';
 import Portfolio from './containers/Portfolio/Portfolio';
-import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
+import { background, ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import '../styles/globals.scss';
 import Head from 'next/head';
-
-import { extendTheme, type ThemeConfig } from '@chakra-ui/react';
-const config: ThemeConfig = {
-  initialColorMode: 'dark',
-  useSystemColorMode: false,
-};
-
-const theme = extendTheme({ config });
+import theme from '../public/theme';
+import { Box, Stack, Spacer, HStack } from '@chakra-ui/react';
+import NavBar from './components/NavBar/NavBar';
 
 function MyApp() {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <html lang={'en'}>
         <Head>
           <title>John Farrell</title>
           <link rel="shortcut icon" href="/images/favicon.ico" />
-          <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/images/apple-touch-icon.png"
-          />
           <link
             rel="icon"
             type="image/png"
@@ -38,8 +28,9 @@ function MyApp() {
             href="/images/favicon-16x16.png"
           />
         </Head>
-        <body>
-          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+        <body className="background">
+          <ColorModeScript initialColorMode={theme.initialColorMode} />
+          <NavBar />
           <Portfolio />
           <Footer />
         </body>
