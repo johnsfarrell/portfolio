@@ -6,11 +6,9 @@ import Navbar from '../../components/NavBar/NavBar';
 
 const Portfolio = (): React.ReactElement => {
   return (
-    <Container maxW="810px" margin="auto" mb={10} px={0}>
+    <Container maxW="1400px" margin="auto" mb={10} px={0}>
       <IntroductionCard />
-      <Container px={0} maxW={'2000px'}>
-        <Projects />
-      </Container>
+      <Projects />
     </Container>
   );
 };

@@ -22,7 +22,6 @@ const Socials = (): React.ReactElement => {
           aria-label="linkedin"
           icon={<FaLinkedinIn />}
           fontSize="xx-large"
-          href="https://www.linkedin.com/in/johnsfarrell/"
         />
         <chakra.span display="none">LinkedIn Link</chakra.span>
       </Link>
@@ -53,7 +52,6 @@ const Socials = (): React.ReactElement => {
           rightIcon={<FaFileContract fontSize="xx-large" />}
           colorScheme="gray"
           fontWeight="bold"
-          fontFamily="mono"
           fontSize="xl"
         >
           RESUME&nbsp;

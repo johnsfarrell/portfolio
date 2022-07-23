@@ -4,18 +4,13 @@ import ProjectCard from './ProjectCard';
 
 const Projects = (): React.ReactElement => {
   return (
-    <Box margin="auto" my={3} px={0}>
-      <Flex justifyContent={'center'}>
-        <Heading px={10} py={5} fontSize={{ lg: '5xl', base: '4xl' }}>
-          MY <chakra.span className="cg-generic2">PROJECTS</chakra.span>
-        </Heading>
-      </Flex>
+    <Box margin="auto" my={4} width="95%">
       <Flex>
-        <SimpleGrid columns={1}>
-          <Wrap display="none">
+        <SimpleGrid columns={3} gap={7}>
+          <Wrap>
             <ProjectCard
               date="September &#39;22"
-              name="JACKET TRACKER"
+              name="Jacket Tracker"
               description="We use cookies and similar technologies to help personalise content, tailor and measure ads, and provide a better experience. By clicking OK or turning an option on in Cookie Preferences, you agree to this, as outlined in our Cookie Policy. To change preferences or withdraw consent, please update your Cookie Preferences."
               githubLink="https://github.com/johnsfarrell/calcproject"
               liveLink="https://johnsfarrell.github.io/calcproject/"
@@ -31,10 +26,10 @@ const Projects = (): React.ReactElement => {
               contribution="COOP"
             />
           </Wrap>
-          <Wrap display="none">
+          <Wrap>
             <ProjectCard
               date="July &#39;22"
-              name="MARKUP IO"
+              name="Markup IO"
               description="We use cookies and similar technologies to help personalise content, tailor and measure ads, and provide a better experience. By clicking OK or turning an option on in Cookie Preferences, you agree to this, as outlined in our Cookie Policy. To change preferences or withdraw consent, please update your Cookie Preferences."
               githubLink="https://github.com/"
               liveLink="https://github.com/"
@@ -57,7 +52,7 @@ const Projects = (): React.ReactElement => {
           </Wrap>
           <ProjectCard
             date="June &#39;22"
-            name="CALCULATOR"
+            name="Calculator"
             description="This was my high school project for AP Calculus BC. Using Texas Instruments as an inspiration, I strived to produce a calculator of similar style and function. With only a few weeks (late May to early June), I was in a crunch to see how much I could do. A good introduction to front-end web development and creating web applications."
             githubLink="https://github.com/johnsfarrell/calcproject"
             liveLink="https://johnsfarrell.github.io/calcproject/"

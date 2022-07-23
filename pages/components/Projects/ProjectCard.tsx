@@ -18,24 +18,15 @@ const ProjectCard = (props: {
   contribution: string;
 }): React.ReactElement => {
   return (
-    <Flex
-      pb={50}
-      px={{
-        lg: 5,
-        base: 0,
-      }}
-      pt={0}
-      w="100%"
-      alignItems="center"
-      justifyContent="center"
-    >
+    <Flex w={'100%'} alignItems="center" justifyContent="center">
       <Box
         px={8}
         py={4}
-        rounded="lg"
+        borderRadius={25}
         className="shadow-box-lg"
         bg="gray.800"
         width="2xl"
+        height={500}
       >
         <Flex justifyContent="space-between" alignItems="center">
           <Link
@@ -48,9 +39,7 @@ const ProjectCard = (props: {
               textDecor: 'underline',
             }}
           >
-            <chakra.span className={'cg-' + props.color}>
-              {props.name.toUpperCase()}
-            </chakra.span>
+            <chakra.span>{props.name}</chakra.span>
           </Link>
           <chakra.span fontSize="sm" color="gray.400">
             {props.date}

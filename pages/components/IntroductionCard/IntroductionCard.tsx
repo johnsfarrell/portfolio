@@ -14,7 +14,8 @@ import {
   Container,
 } from '@chakra-ui/react';
 import Socials from '../Socials/Socials';
-import Languages, { LanguagesMain } from '../Languages/Languages';
+import Languages, { LanguagesMainCard } from '../Languages/Languages';
+import BioCard from '../BioCard/BioCard';
 
 const IntroductionCard = (): React.ReactElement => {
   return (
@@ -23,14 +24,14 @@ const IntroductionCard = (): React.ReactElement => {
         <Image
           className={'shadow-box-lg-light animated-1'}
           margin={'auto'}
-          width={'50%'}
+          width={'30%'}
           src="https://avatars.githubusercontent.com/u/69059806?v=4"
           alt="John Farrell Profile"
           borderRadius={'100%'}
         />
       </Box>
-      <Box margin={'auto'} justifyContent={'center'}>
-        <Box justifyContent={'center'}>
+      <Box justifyContent={'center'}>
+        <Box justifyContent={'center'} w={'70%'} margin={'auto'}>
           <Heading
             as="h1"
             fontSize={'8xl'}
@@ -46,7 +47,7 @@ const IntroductionCard = (): React.ReactElement => {
             className={'animated-3'}
           >
             Studying computer science at Brown University. My passion is in
-            full-stack and software engineering.Lorem ipsum dolor sit amet,
+            full-stack and software engineering. Lorem ipsum dolor sit amet,
             consectetur adipiscing elit, quis nostrud exercitation ullamco
             laboris nisi ut aliquip ex ea commodo consequat. My passion is in
             full-stack and software engineering.
@@ -60,12 +61,12 @@ const IntroductionCard = (): React.ReactElement => {
             <Socials />
           </Flex>
         </Box>
-        <Box mt={75}>
-          <Heading fontSize="2xl" textAlign={'center'}>
-            I am always excited to learn!
-          </Heading>
+        <Box mt={250}>
           <Flex justifyContent={'center'} width={'100%'} mt={4}>
-            <LanguagesMain
+            <BioCard />
+          </Flex>
+          <Flex justifyContent={'center'} width={'100%'} m={'auto'} mt={4}>
+            <LanguagesMainCard
               languages={[
                 { name: 'JavaScript', color: 'yellow' },
                 { name: 'TypeScript', color: 'blue' },
@@ -81,7 +82,7 @@ const IntroductionCard = (): React.ReactElement => {
                 { name: 'NodeJS', color: 'green' },
                 { name: 'PHP', color: 'teal' },
                 { name: 'NextJS', color: 'orange' },
-                { name: 'Cypress', color: 'gray' },
+                { name: 'Cypress', color: 'teal' },
                 { name: 'Docker', color: 'blue' },
                 { name: 'SASS', color: 'pink' },
                 { name: 'Racket', color: 'red' },
@@ -89,6 +90,26 @@ const IntroductionCard = (): React.ReactElement => {
               size="2xl"
             />
           </Flex>
+          <Box w={'90%'} m={'auto'} mt={40} mb={20}>
+            <Heading as="h2" fontSize={'8xl'} textAlign={'left'}>
+              My{' '}
+              <chakra.span className="cg-apple12 animated-2">
+                Projects.
+              </chakra.span>
+            </Heading>
+            <Text
+              my={3}
+              fontSize="2xl"
+              color={'gray.500'}
+              textAlign={'left'}
+              className={'animated-3'}
+              width={'50%'}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, quis
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </Text>
+          </Box>
         </Box>
       </Box>
     </Box>
