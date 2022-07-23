@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wrap, WrapItem, Center, Flex } from '@chakra-ui/react';
+import { Wrap, WrapItem, Center, Flex, Heading, Grid } from '@chakra-ui/react';
 type Language = {
   name: string;
   color: string;
@@ -37,6 +37,30 @@ const Languages = (props: {
         </Wrap>
       ))}
     </Flex>
+  );
+};
+
+export const LanguagesMain = (props: {
+  languages: Language[];
+  size: string;
+}): React.ReactElement => {
+  return (
+    <Grid>
+      <Flex
+        className={'cg-apple16'}
+        p={10}
+        borderRadius={'3xl'}
+        flexWrap="wrap"
+        justifyContent={{ lg: 'left', base: 'center' }}
+      >
+        {props.languages.map((lang: Language) => (
+          <Wrap key={lang.name} p={1}>
+            <LanguageCard langInput={lang} size={props.size} key={lang.name} />
+          </Wrap>
+        ))}
+      </Flex>
+      <Heading>Hi</Heading>
+    </Grid>
   );
 };
 

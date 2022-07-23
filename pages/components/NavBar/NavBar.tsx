@@ -1,15 +1,17 @@
 import React from 'react';
-import { Box, Stack, Spacer, HStack } from '@chakra-ui/react';
+import { Button, Stack, Spacer, HStack } from '@chakra-ui/react';
 
 const NavBar = (): React.ReactElement => {
   return (
     <Stack p={4} className={'navbar glossy'}>
       <HStack margin={'auto'} width={810} fontSize={14}>
-        <Box>John Farrell</Box>
+        <Button>Contact Me</Button>
         <Spacer />
-        <Box color={'gray.500'}>Overview</Box>
-        <Box>Portfolio</Box>
-        <Box>Resume</Box>
+        <Button bgColor={'transparent'} color={'gray.500'}>
+          Overview
+        </Button>
+        <Button bgColor={'transparent'}>Portfolio</Button>
+        <Button bgColor={'transparent'}>Resume</Button>
       </HStack>
     </Stack>
   );

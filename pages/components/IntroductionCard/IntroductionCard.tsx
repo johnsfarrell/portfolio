@@ -14,12 +14,12 @@ import {
   Container,
 } from '@chakra-ui/react';
 import Socials from '../Socials/Socials';
-import Languages from '../Languages/Languages';
+import Languages, { LanguagesMain } from '../Languages/Languages';
 
 const IntroductionCard = (): React.ReactElement => {
   return (
     <Box>
-      <Box mt={20}>
+      <Box mt={20} p={3}>
         <Image
           className={'shadow-box-lg-light animated-1'}
           margin={'auto'}
@@ -65,7 +65,7 @@ const IntroductionCard = (): React.ReactElement => {
             I am always excited to learn!
           </Heading>
           <Flex justifyContent={'center'} width={'100%'} mt={4}>
-            <Languages
+            <LanguagesMain
               languages={[
                 { name: 'JavaScript', color: 'yellow' },
                 { name: 'TypeScript', color: 'blue' },

@@ -5,24 +5,13 @@ import ProjectCard from './ProjectCard';
 const Projects = (): React.ReactElement => {
   return (
     <Box margin="auto" my={3} px={0}>
-      <Flex
-        justifyContent={{
-          lg: 'flex-start',
-          base: 'center',
-        }}
-      >
+      <Flex justifyContent={'center'}>
         <Heading px={10} py={5} fontSize={{ lg: '5xl', base: '4xl' }}>
           MY <chakra.span className="cg-generic2">PROJECTS</chakra.span>
         </Heading>
       </Flex>
       <Flex>
-        <SimpleGrid
-          columns={{
-            xl: 3,
-            lg: 2,
-            base: 1,
-          }}
-        >
+        <SimpleGrid columns={1}>
           <Wrap display="none">
             <ProjectCard
               date="September &#39;22"
