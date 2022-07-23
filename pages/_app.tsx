@@ -1,14 +1,13 @@
 import * as React from 'react';
 import Footer from './components/Footer/Footer';
-import Portfolio from './containers/Portfolio/Portfolio';
 import { background, ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import '../styles/globals.scss';
 import Head from 'next/head';
 import theme from '../public/theme';
-import { Box, Stack, Spacer, HStack } from '@chakra-ui/react';
 import NavBar from './components/NavBar/NavBar';
+import type { AppProps } from 'next/app';
 
-function MyApp() {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <html lang={'en'}>
@@ -31,7 +30,7 @@ function MyApp() {
         <body className="background">
           <ColorModeScript initialColorMode={theme.initialColorMode} />
           <NavBar />
-          <Portfolio />
+          <Component {...pageProps} />
           <Footer />
         </body>
       </html>

@@ -1,8 +1,7 @@
 import React from 'react';
 import IntroductionCard from '../../components/IntroductionCard/IntroductionCard';
 import Projects from '../../components/Projects/Projects';
-import { Container, Wrap } from '@chakra-ui/react';
-import Navbar from '../../components/NavBar/NavBar';
+import { Container } from '@chakra-ui/react';
 
 const Portfolio = (): React.ReactElement => {
   return (

@@ -34,6 +34,40 @@ const LanguageCard = (props: {
   );
 };
 
+const LanguageCardProject = (props: {
+  langInput: Language;
+  size: string;
+}): React.ReactElement => {
+  return (
+    <WrapItem className={'language-main'}>
+      <Text
+        fontSize={'sm'}
+        borderRadius={5}
+        px={2}
+        fontWeight="bold"
+        color="gray.400"
+      >
+        {props.langInput.name.toUpperCase()}
+      </Text>
+    </WrapItem>
+  );
+};
+
+export const LanguagesCardProject = (props: {
+  languages: Language[];
+  size: string;
+}): React.ReactElement => {
+  return (
+    <Flex flexWrap="wrap" justifyContent={'left'}>
+      {props.languages.map((lang: Language) => (
+        <Wrap key={lang.name} p={1}>
+          <LanguageCardProject langInput={lang} size={'lg'} key={lang.name} />
+        </Wrap>
+      ))}
+    </Flex>
+  );
+};
+
 const Languages = (props: {
   languages: Language[];
   size: string;
@@ -76,7 +110,7 @@ export const LanguagesMainCard = (props: {
   return (
     <Grid
       w={'95%'}
-      templateColumns="repeat(2, 1fr)"
+      templateColumns={{ md: 'repeat(2, 1fr)', base: 'repeat(1, 1fr)' }}
       gap={8}
       className={'cg-apple16'}
       p={10}
@@ -84,7 +118,23 @@ export const LanguagesMainCard = (props: {
       flexWrap="wrap"
       justifyContent={'left'}
     >
-      <GridItem rowSpan={2} width={500}>
+      <GridItem
+        rowSpan={2}
+        display="flex"
+        flexWrap={'wrap'}
+        alignContent={'center'}
+        width={'100%'}
+      >
+        <Heading fontSize={'5xl'} mb={10}>
+          I&apos;m Prepared.
+        </Heading>
+        <Text fontSize={'lg'}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </Text>
+      </GridItem>
+
+      <GridItem rowSpan={2} width={'100%'}>
         <Flex flexWrap={'wrap'}>
           {props.languages.map((lang: Language) => (
             <Flex flexWrap={'wrap'} key={lang.name} p={1}>
@@ -96,21 +146,6 @@ export const LanguagesMainCard = (props: {
             </Flex>
           ))}
         </Flex>
-      </GridItem>
-      <GridItem
-        rowSpan={2}
-        display="flex"
-        flexWrap={'wrap'}
-        alignContent={'center'}
-        width={400}
-      >
-        <Heading fontSize={'5xl'} mb={10}>
-          I&apos;m Prepared.
-        </Heading>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </Text>
       </GridItem>
     </Grid>
   );

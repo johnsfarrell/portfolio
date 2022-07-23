@@ -34,15 +34,15 @@ const IntroductionCard = (): React.ReactElement => {
         <Box justifyContent={'center'} w={'70%'} margin={'auto'}>
           <Heading
             as="h1"
-            fontSize={'8xl'}
+            fontSize={{ lg: '8xl', base: '7xl' }}
             textAlign={'center'}
             className="cg-apple12 animated-2"
           >
-            John Farrell
+            John Farrell.
           </Heading>
           <Text
             my={3}
-            fontSize="3xl"
+            fontSize={{ lg: '3xl', base: '2xl' }}
             textAlign={'center'}
             className={'animated-3'}
           >
@@ -91,7 +91,11 @@ const IntroductionCard = (): React.ReactElement => {
             />
           </Flex>
           <Box w={'90%'} m={'auto'} mt={40} mb={20}>
-            <Heading as="h2" fontSize={'8xl'} textAlign={'left'}>
+            <Heading
+              as="h2"
+              fontSize={{ lg: '8xl', base: '6xl' }}
+              textAlign={'left'}
+            >
               My{' '}
               <chakra.span className="cg-apple12 animated-2">
                 Projects.
@@ -103,7 +107,7 @@ const IntroductionCard = (): React.ReactElement => {
               color={'gray.500'}
               textAlign={'left'}
               className={'animated-3'}
-              width={'50%'}
+              width={{ lg: '50%', base: '80%' }}
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, quis
               nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

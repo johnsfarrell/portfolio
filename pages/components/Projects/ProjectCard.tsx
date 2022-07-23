@@ -1,7 +1,16 @@
 import React from 'react';
-import { Box, Text, Flex, Link, chakra, IconButton } from '@chakra-ui/react';
+import {
+  Box,
+  Text,
+  Flex,
+  Link,
+  chakra,
+  IconButton,
+  Spacer,
+  Center,
+} from '@chakra-ui/react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import Languages from '../Languages/Languages';
+import Languages, { LanguagesCardProject } from '../Languages/Languages';
 
 type Language = {
   name: string;
@@ -18,16 +27,16 @@ const ProjectCard = (props: {
   contribution: string;
 }): React.ReactElement => {
   return (
-    <Flex w={'100%'} alignItems="center" justifyContent="center">
-      <Box
-        px={8}
-        py={4}
-        borderRadius={25}
-        className="shadow-box-lg"
-        bg="gray.800"
-        width="2xl"
-        height={500}
-      >
+    <Flex
+      h={'fit-content'}
+      px={8}
+      py={4}
+      flexWrap={'wrap'}
+      alignContent={'space-between'}
+      borderRadius={25}
+      bg="gray.800"
+    >
+      <Box>
         <Flex justifyContent="space-between" alignItems="center">
           <Link
             href={props.liveLink}
@@ -45,17 +54,17 @@ const ProjectCard = (props: {
             {props.date}
           </chakra.span>
         </Flex>
+        <chakra.p mt={2} color="gray.300">
+          {props.description}
+        </chakra.p>
+      </Box>
 
-        <Box mt={2}>
-          <chakra.p mt={2} color="gray.300">
-            {props.description}
-          </chakra.p>
-        </Box>
-        <Box mt={4}>
-          <Languages languages={props.languages} size="md" />
-        </Box>
+      <Box my={4}>
+        <LanguagesCardProject languages={props.languages} size="md" />
+      </Box>
 
-        <Flex justifyContent="space-between" alignItems="center" mt={4}>
+      <Box display={'contents'}>
+        <Center>
           <Text
             color="gray.100"
             bg="gray.600"
@@ -66,32 +75,32 @@ const ProjectCard = (props: {
           >
             {props.contribution.toUpperCase()}
           </Text>
-
-          <Flex alignItems="center">
-            <Link href={props.githubLink} isExternal>
-              <IconButton
-                color="gray.600"
-                _hover={{ color: 'gray.400' }}
-                bg="transparent"
-                aria-label={props.name + 'github'}
-                icon={<FaGithub />}
-                fontSize={27}
-              />
-              <chakra.span display="none">Github Link</chakra.span>
-            </Link>
-            <Link href={props.liveLink} isExternal>
-              <IconButton
-                color="gray.600"
-                _hover={{ color: 'gray.400' }}
-                bg="transparent"
-                size="sm"
-                aria-label={props.name + 'external'}
-                icon={<FaExternalLinkAlt />}
-                fontSize={22}
-              />
-              <chakra.span display="none">External Website Link</chakra.span>
-            </Link>
-          </Flex>
+        </Center>
+        <Spacer />
+        <Flex alignItems="center">
+          <Link href={props.githubLink} isExternal>
+            <IconButton
+              color="gray.600"
+              _hover={{ color: 'gray.400' }}
+              bg="transparent"
+              aria-label={props.name + 'github'}
+              icon={<FaGithub />}
+              fontSize={27}
+            />
+            <chakra.span display="none">Github Link</chakra.span>
+          </Link>
+          <Link href={props.liveLink} isExternal>
+            <IconButton
+              color="gray.600"
+              _hover={{ color: 'gray.400' }}
+              bg="transparent"
+              size="sm"
+              aria-label={props.name + 'external'}
+              icon={<FaExternalLinkAlt />}
+              fontSize={22}
+            />
+            <chakra.span display="none">External Website Link</chakra.span>
+          </Link>
         </Flex>
       </Box>
     </Flex>
