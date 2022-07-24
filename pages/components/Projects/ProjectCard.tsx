@@ -73,7 +73,7 @@ const ProjectCard = (props: {
             fontWeight="bold"
             borderRadius={7}
           >
-            {props.contribution.toUpperCase()}
+            {props.contribution && props.contribution.toUpperCase()}
           </Text>
         </Center>
         <Spacer />

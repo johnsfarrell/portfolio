@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Footer from './components/Footer/Footer';
 import { background, ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import '../styles/globals.scss';
@@ -7,7 +7,7 @@ import theme from '../public/theme';
 import NavBar from './components/NavBar/NavBar';
 import type { AppProps } from 'next/app';
 
-function MyApp({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <ChakraProvider theme={theme}>
       <html lang={'en'}>
@@ -38,4 +38,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default App;

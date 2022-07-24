@@ -28,7 +28,7 @@ const LanguageCard = (props: {
         color="blackAlpha.900"
         bg={props.langInput.color + '.400'}
       >
-        {props.langInput.name.toUpperCase()}
+        {props.langInput.name && props.langInput.name.toUpperCase()}
       </Center>
     </WrapItem>
   );
@@ -47,7 +47,7 @@ const LanguageCardProject = (props: {
         fontWeight="bold"
         color="gray.400"
       >
-        {props.langInput.name.toUpperCase()}
+        {props.langInput.name && props.langInput.name.toUpperCase()}
       </Text>
     </WrapItem>
   );
@@ -59,11 +59,12 @@ export const LanguagesCardProject = (props: {
 }): React.ReactElement => {
   return (
     <Flex flexWrap="wrap" justifyContent={'left'}>
-      {props.languages.map((lang: Language) => (
-        <Wrap key={lang.name} p={1}>
-          <LanguageCardProject langInput={lang} size={'lg'} key={lang.name} />
-        </Wrap>
-      ))}
+      {props.languages &&
+        props.languages.map((lang: Language) => (
+          <Wrap key={lang.name} p={1}>
+            <LanguageCardProject langInput={lang} size={'lg'} key={lang.name} />
+          </Wrap>
+        ))}
     </Flex>
   );
 };
@@ -74,11 +75,12 @@ const Languages = (props: {
 }): React.ReactElement => {
   return (
     <Flex flexWrap="wrap" justifyContent={{ lg: 'left', base: 'center' }}>
-      {props.languages.map((lang: Language) => (
-        <Wrap key={lang.name} p={1}>
-          <LanguageCard langInput={lang} size={props.size} key={lang.name} />
-        </Wrap>
-      ))}
+      {props.languages &&
+        props.languages.map((lang: Language) => (
+          <Wrap key={lang.name} p={1}>
+            <LanguageCard langInput={lang} size={props.size} key={lang.name} />
+          </Wrap>
+        ))}
     </Flex>
   );
 };
@@ -97,7 +99,7 @@ const LanguageMainCard = (props: {
         color="blackAlpha.900"
         className={'cg-card-' + props.langInput.color}
       >
-        {props.langInput.name.toUpperCase()}
+        {props.langInput.name && props.langInput.name.toUpperCase()}
       </Center>
     </WrapItem>
   );
@@ -136,15 +138,16 @@ export const LanguagesMainCard = (props: {
 
       <GridItem rowSpan={2} width={'100%'}>
         <Flex flexWrap={'wrap'}>
-          {props.languages.map((lang: Language) => (
-            <Flex flexWrap={'wrap'} key={lang.name} p={1}>
-              <LanguageMainCard
-                langInput={lang}
-                size={props.size}
-                key={lang.name}
-              />
-            </Flex>
-          ))}
+          {props.languages &&
+            props.languages.map((lang: Language) => (
+              <Flex flexWrap={'wrap'} key={lang.name} p={1}>
+                <LanguageMainCard
+                  langInput={lang}
+                  size={props.size}
+                  key={lang.name}
+                />
+              </Flex>
+            ))}
         </Flex>
       </GridItem>
     </Grid>
