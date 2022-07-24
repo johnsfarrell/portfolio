@@ -12,10 +12,12 @@ import {
   Link,
   chakra,
   Container,
+  HStack,
 } from '@chakra-ui/react';
 import Socials from '../Socials/Socials';
-import Languages, { LanguagesMainCard } from '../Languages/Languages';
+import { LanguagesMainCard } from '../Languages/Languages';
 import BioCard from '../BioCard/BioCard';
+import ContactCard from '../ContactCard/ContactCard';
 
 const IntroductionCard = (): React.ReactElement => {
   return (
@@ -65,31 +67,34 @@ const IntroductionCard = (): React.ReactElement => {
           <Flex justifyContent={'center'} width={'100%'} mt={4}>
             <BioCard />
           </Flex>
-          <Flex justifyContent={'center'} width={'100%'} m={'auto'} mt={4}>
-            <LanguagesMainCard
-              languages={[
-                { name: 'JavaScript', color: 'yellow' },
-                { name: 'TypeScript', color: 'blue' },
-                { name: 'MySQL', color: 'orange' },
-                { name: 'CSS', color: 'blue' },
-                { name: 'Java', color: 'red' },
-                { name: 'Chakra', color: 'teal' },
-                { name: 'GraphQL', color: 'pink' },
-                { name: 'React', color: 'blue' },
-                { name: 'HTML', color: 'red' },
-                { name: 'PostgreSQL', color: 'teal' },
-                { name: 'BootStrap5', color: 'blue' },
-                { name: 'NodeJS', color: 'green' },
-                { name: 'PHP', color: 'teal' },
-                { name: 'NextJS', color: 'orange' },
-                { name: 'Cypress', color: 'teal' },
-                { name: 'Docker', color: 'blue' },
-                { name: 'SASS', color: 'pink' },
-                { name: 'Racket', color: 'red' },
-              ]}
-              size="2xl"
-            />
-          </Flex>
+          <HStack>
+            <Flex justifyContent={'center'} width={'100%'} m={'auto'} mt={4}>
+              <LanguagesMainCard
+                languages={[
+                  { name: 'JavaScript', color: 'yellow' },
+                  { name: 'TypeScript', color: 'blue' },
+                  { name: 'MySQL', color: 'orange' },
+                  { name: 'CSS', color: 'blue' },
+                  { name: 'Java', color: 'red' },
+                  { name: 'Chakra', color: 'teal' },
+                  { name: 'GraphQL', color: 'pink' },
+                  { name: 'React', color: 'blue' },
+                  { name: 'HTML', color: 'red' },
+                  { name: 'PostgreSQL', color: 'teal' },
+                  { name: 'BootStrap5', color: 'blue' },
+                  { name: 'NodeJS', color: 'green' },
+                  { name: 'PHP', color: 'teal' },
+                  { name: 'NextJS', color: 'orange' },
+                  { name: 'Cypress', color: 'teal' },
+                  { name: 'Docker', color: 'blue' },
+                  { name: 'SASS', color: 'pink' },
+                  { name: 'Racket', color: 'red' },
+                ]}
+                size="2xl"
+              />
+            </Flex>
+            <ContactCard />
+          </HStack>
           <Box w={'90%'} m={'auto'} mt={40} mb={20}>
             <Heading
               as="h2"

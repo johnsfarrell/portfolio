@@ -16,7 +16,7 @@ import Link from 'next/link';
 
 const Contact = (): React.ReactElement => {
   return (
-    <Center className={`cg-apple13`} w={'100vw'} h={'100vh'}>
+    <Center className={'cg-apple13'} w={'100vw'} h={'100vh'}>
       <Link href="../">
         <Badge pos={'absolute'} left={4} top={4} _hover={{ cursor: 'pointer' }}>
           To main page
