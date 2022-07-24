@@ -111,8 +111,8 @@ export const LanguagesMainCard = (props: {
 }): React.ReactElement => {
   return (
     <Grid
-      w={'95%'}
-      templateColumns={{ md: 'repeat(2, 1fr)', base: 'repeat(1, 1fr)' }}
+      w={'100%'}
+      templateColumns={{ lg: 'repeat(2, 1fr)', base: 'repeat(1, 1fr)' }}
       gap={8}
       className={'cg-apple20'}
       p={10}
@@ -127,7 +127,7 @@ export const LanguagesMainCard = (props: {
         alignContent={'center'}
         width={'100%'}
       >
-        <Heading fontSize={'5xl'} mb={10}>
+        <Heading fontSize={{ sm: '5xl', base: '4xl' }} mb={10}>
           I&apos;m Prepared.
         </Heading>
         <Text fontSize={'lg'}>

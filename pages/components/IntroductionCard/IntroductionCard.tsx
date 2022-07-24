@@ -13,114 +13,77 @@ import {
   chakra,
   Container,
   HStack,
+  Stack,
 } from '@chakra-ui/react';
 import Socials from '../Socials/Socials';
 import { LanguagesMainCard } from '../Languages/Languages';
 import BioCard from '../BioCard/BioCard';
 import ContactCard from '../ContactCard/ContactCard';
+import IntroductionSlider from './IntroductionSlider';
 
 const IntroductionCard = (): React.ReactElement => {
   return (
     <Box>
-      <Box mt={20} p={3}>
-        <Image
-          className={'shadow-box-lg-light animated-1'}
-          margin={'auto'}
-          width={'30%'}
-          src="https://avatars.githubusercontent.com/u/69059806?v=4"
-          alt="John Farrell Profile"
-          borderRadius={'100%'}
-        />
-      </Box>
-      <Box justifyContent={'center'}>
-        <Box justifyContent={'center'} w={'70%'} margin={'auto'}>
+      <IntroductionSlider />
+      <Box mt={250}>
+        <Flex justifyContent={'center'} width={'100%'} mt={4}>
+          <BioCard />
+        </Flex>
+        <Flex
+          wrap={{ lg: 'nowrap', base: 'wrap' }}
+          alignItems={'stretch'}
+          p={3}
+          dir={'column'}
+        >
+          <Flex width={{ lg: '60%', base: '100%' }} mb={{ lg: 0, base: 3 }}>
+            <LanguagesMainCard
+              languages={[
+                { name: 'JavaScript', color: 'yellow' },
+                { name: 'TypeScript', color: 'blue' },
+                { name: 'MySQL', color: 'orange' },
+                { name: 'CSS', color: 'blue' },
+                { name: 'Java', color: 'red' },
+                { name: 'Chakra', color: 'teal' },
+                { name: 'GraphQL', color: 'pink' },
+                { name: 'React', color: 'blue' },
+                { name: 'HTML', color: 'red' },
+                { name: 'PostgreSQL', color: 'teal' },
+                { name: 'BootStrap5', color: 'blue' },
+                { name: 'NodeJS', color: 'green' },
+                { name: 'PHP', color: 'teal' },
+                { name: 'NextJS', color: 'orange' },
+                { name: 'Cypress', color: 'teal' },
+                { name: 'Docker', color: 'blue' },
+                { name: 'SASS', color: 'pink' },
+                { name: 'Racket', color: 'red' },
+              ]}
+              size="2xl"
+            />
+          </Flex>
+          <Flex w={3} />
+          <Flex width={{ lg: '40%', base: '100%' }}>
+            <ContactCard />
+          </Flex>
+        </Flex>
+        <Box w={'90%'} m={'auto'} mt={40} mb={20}>
           <Heading
-            as="h1"
-            fontSize={{ lg: '8xl', base: '7xl' }}
-            textAlign={'center'}
-            className="cg-apple12 animated-2"
+            as="h2"
+            fontSize={{ lg: '8xl', base: '6xl' }}
+            textAlign={'left'}
           >
-            John Farrell.
+            My <chakra.span className="cg-apple12">Projects.</chakra.span>
           </Heading>
           <Text
             my={3}
-            fontSize={{ lg: '3xl', base: '2xl' }}
-            textAlign={'center'}
-            className={'animated-3'}
+            fontSize="2xl"
+            color={'gray.500'}
+            textAlign={'left'}
+            width={{ lg: '50%', base: '90%' }}
           >
-            Studying computer science at Brown University. My passion is in
-            full-stack and software engineering. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. My passion is in
-            full-stack and software engineering.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, quis
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
           </Text>
-          <Flex
-            justifyContent={'center'}
-            className={'animated-4'}
-            p={5}
-            color={'gray.300'}
-          >
-            <Socials />
-          </Flex>
-        </Box>
-        <Box mt={250}>
-          <Flex justifyContent={'center'} width={'100%'} mt={4}>
-            <BioCard />
-          </Flex>
-          <HStack d={'flex'} alignItems={'stretch'} p={5}>
-            <Flex width={'60%'}>
-              <LanguagesMainCard
-                languages={[
-                  { name: 'JavaScript', color: 'yellow' },
-                  { name: 'TypeScript', color: 'blue' },
-                  { name: 'MySQL', color: 'orange' },
-                  { name: 'CSS', color: 'blue' },
-                  { name: 'Java', color: 'red' },
-                  { name: 'Chakra', color: 'teal' },
-                  { name: 'GraphQL', color: 'pink' },
-                  { name: 'React', color: 'blue' },
-                  { name: 'HTML', color: 'red' },
-                  { name: 'PostgreSQL', color: 'teal' },
-                  { name: 'BootStrap5', color: 'blue' },
-                  { name: 'NodeJS', color: 'green' },
-                  { name: 'PHP', color: 'teal' },
-                  { name: 'NextJS', color: 'orange' },
-                  { name: 'Cypress', color: 'teal' },
-                  { name: 'Docker', color: 'blue' },
-                  { name: 'SASS', color: 'pink' },
-                  { name: 'Racket', color: 'red' },
-                ]}
-                size="2xl"
-              />
-            </Flex>
-            <Flex w={'40%'}>
-              <ContactCard />
-            </Flex>
-          </HStack>
-          <Box w={'90%'} m={'auto'} mt={40} mb={20}>
-            <Heading
-              as="h2"
-              fontSize={{ lg: '8xl', base: '6xl' }}
-              textAlign={'left'}
-            >
-              My{' '}
-              <chakra.span className="cg-apple12 animated-2">
-                Projects.
-              </chakra.span>
-            </Heading>
-            <Text
-              my={3}
-              fontSize="2xl"
-              color={'gray.500'}
-              textAlign={'left'}
-              className={'animated-3'}
-              width={{ lg: '50%', base: '80%' }}
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, quis
-              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.
-            </Text>
-          </Box>
         </Box>
       </Box>
     </Box>

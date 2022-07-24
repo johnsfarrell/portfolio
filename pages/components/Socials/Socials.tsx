@@ -41,11 +41,11 @@ const Socials = (): React.ReactElement => {
       </Link>
       <Link
         href="../resume"
-        isExternal
         className="shadow-box-sm"
         _hover={{
           textDecoration: 'none',
         }}
+        passHref
       >
         <Button
           size="lg"

@@ -17,27 +17,23 @@ import Link from 'next/link';
 const Contact = (): React.ReactElement => {
   return (
     <Center className={'cg-apple13'} w={'100vw'} h={'100vh'}>
-      <Link href="../">
+      <Link href="../" passHref>
         <Badge pos={'absolute'} left={4} top={4} _hover={{ cursor: 'pointer' }}>
           To main page
         </Badge>
       </Link>
       <Container
-        p={{ lg: 20, base: 10 }}
+        p={20}
         borderRadius={30}
         w={'fit-content'}
         bg={'gray.900'}
         className={'shadow-box-sm-dark'}
       >
         <VStack>
-          <Heading
-            as="h1"
-            fontSize={{ lg: '7xl', base: '5xl' }}
-            textAlign={'center'}
-          >
+          <Heading as="h1" fontSize={'5xl'} textAlign={'center'} mb={6}>
             John Farrell
           </Heading>
-          <Flex justifyContent={'center'} py={5}>
+          <Flex justifyContent={'center'}>
             <Socials />
           </Flex>
         </VStack>

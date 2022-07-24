@@ -20,7 +20,8 @@ type Language = {
 export const BioCard = (): React.ReactElement => {
   return (
     <Grid
-      width={'95%'}
+      mx={3}
+      width={'100%'}
       templateColumns={{ md: 'repeat(2, 1fr)', base: 'repeat(1, 1fr)' }}
       className={'cg-apple15'}
       p={10}
@@ -44,11 +45,8 @@ export const BioCard = (): React.ReactElement => {
         alignContent={'center'}
         width={'100%'}
       >
-        <Heading fontSize={'5xl'} mb={10}>
-          <VStack>
-            <Text>Running by day,</Text>
-            <Text>coding by night.</Text>
-          </VStack>
+        <Heading fontSize={{ sm: '5xl', base: '4xl' }} mb={10}>
+          Running by day, coding by night.
         </Heading>
         <Text>
           I enjoy racing D1 cross country, track and field at Brown University.
