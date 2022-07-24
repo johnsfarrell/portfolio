@@ -5,14 +5,23 @@ const NavBar = (): React.ReactElement => {
   return (
     <Stack p={4} className={'navbar glossy'}>
       <HStack margin={'auto'} w={'100%'} fontSize={14}>
-        <Button>Contact Me</Button>
+        <Link
+          href="/contact"
+          _hover={{
+            textDecoration: 'none',
+          }}
+        >
+          <Button>Contact Me</Button>
+        </Link>
         <Spacer />
         <Button bgColor={'transparent'} color={'gray.500'}>
           Overview
         </Button>
         <Link
-          href="https://drive.google.com/file/d/1xmZWYiOLbqmUQMW7szmgTy896eGhxBFZ/view"
-          isExternal
+          href="/resume"
+          _hover={{
+            textDecoration: 'none',
+          }}
         >
           <Button bgColor={'transparent'}>Resume</Button>
         </Link>

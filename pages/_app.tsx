@@ -29,9 +29,7 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
         </Head>
         <body className="background">
           <ColorModeScript initialColorMode={theme.initialColorMode} />
-          <NavBar />
           <Component {...pageProps} />
-          <Footer />
         </body>
       </html>
     </ChakraProvider>
