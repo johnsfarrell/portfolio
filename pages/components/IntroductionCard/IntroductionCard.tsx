@@ -67,8 +67,8 @@ const IntroductionCard = (): React.ReactElement => {
           <Flex justifyContent={'center'} width={'100%'} mt={4}>
             <BioCard />
           </Flex>
-          <HStack>
-            <Flex justifyContent={'center'} width={'100%'} m={'auto'} mt={4}>
+          <HStack d={'flex'} alignItems={'stretch'} p={5}>
+            <Flex width={'60%'}>
               <LanguagesMainCard
                 languages={[
                   { name: 'JavaScript', color: 'yellow' },
@@ -93,7 +93,9 @@ const IntroductionCard = (): React.ReactElement => {
                 size="2xl"
               />
             </Flex>
-            <ContactCard />
+            <Flex w={'40%'}>
+              <ContactCard />
+            </Flex>
           </HStack>
           <Box w={'90%'} m={'auto'} mt={40} mb={20}>
             <Heading
