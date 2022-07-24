@@ -6,7 +6,7 @@ const NavBar = (): React.ReactElement => {
     <Stack p={4} className={'navbar glossy'}>
       <HStack margin={'auto'} w={'100%'} fontSize={14}>
         <Link
-          href="/contact"
+          href="../contact"
           _hover={{
             textDecoration: 'none',
           }}
@@ -18,7 +18,7 @@ const NavBar = (): React.ReactElement => {
           Overview
         </Button>
         <Link
-          href="/resume"
+          href="../resume"
           _hover={{
             textDecoration: 'none',
           }}

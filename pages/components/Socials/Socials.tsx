@@ -40,7 +40,7 @@ const Socials = (): React.ReactElement => {
         <chakra.span display="none">GitHub Link</chakra.span>
       </Link>
       <Link
-        href="https://drive.google.com/file/d/1xmZWYiOLbqmUQMW7szmgTy896eGhxBFZ/view"
+        href="../resume"
         isExternal
         className="shadow-box-sm"
         _hover={{
